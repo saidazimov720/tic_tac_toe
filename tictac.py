@@ -55,4 +55,13 @@ def check_winner():
         winner = board [0][2]
         return True
     return False
+
+def is_board_full():
+    for row in range(grid_size):
+        for col in range(grid_size):
+            if board[row][col] == '':
+                return False
+    return True
+
+
         
