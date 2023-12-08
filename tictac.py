@@ -63,5 +63,14 @@ def is_board_full():
                 return False
     return True
 
-
+while not game_over:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        elif event.type == pygame.MOUSEBUTTONDOWN and winner is None:
+            mouseX, mouseY = pygame.mouse.get_pos()
+            clicked_row = mouseX
+            clicked_col = mouseY
+            
         
