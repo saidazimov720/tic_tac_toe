@@ -48,4 +48,11 @@ def check_winner():
         if board[0][col] == board[1][col] == board[2][col] !='':
             winner = board[0][col]
             return True
+    if board[0][0] == board[1][1] == board[2][2] !='':
+        winner = board[0][0]
+        return True
+    if board[0][2] == board[1][1] == board[2][0] !='':
+        winner = board [0][2]
+        return True
+    return False
         
