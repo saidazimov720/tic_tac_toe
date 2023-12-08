@@ -73,4 +73,14 @@ while not game_over:
             clicked_row = mouseX
             clicked_col = mouseY
             
+            if board[clicked_row][clicked_col] == '':
+                board[clicked_row][clicked_col] = player_turn
+                
+                if check_winner():
+                    game_over = True
+                elif is_board_full():
+                    game_over = True
+                
+                player_turn = 'O' if player_turn == 'X' else 'X'
+
         
