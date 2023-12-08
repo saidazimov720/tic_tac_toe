@@ -94,3 +94,7 @@ if winner:
 elif is_board_full():
     draw_text = font.render(" It is full !", True, line_color)
     screen.blit(draw_text, (width // 2 - 100, height // 2 -50))
+    
+pygame.display.flip()
+pygame.time.wait(3000)
+pygame.quit()
