@@ -83,4 +83,14 @@ while not game_over:
                 
                 player_turn = 'O' if player_turn == 'X' else 'X'
 
-        
+screen.fill(background_color)
+draw_grid()
+draw_XO()
+
+if winner:
+    winner_text = font.render(  "player {winner} wins !", True, line_color)
+    screen.blit(winner_text, (width // 2 - 150, height // 2 - 50))
+
+elif is_board_full():
+    draw_text = font.render(" It is full !", True, line_color)
+    screen.blit(draw_text, (width // 2 - 100, height // 2 -50))
