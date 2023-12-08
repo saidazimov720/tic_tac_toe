@@ -37,3 +37,15 @@ def draw_XO():
                 pygame.draw.circle(screen, line_color,
                                    (int(col * square_size + square_size / 2), int(row * square_size + square_size / 2)),
                                    int(square_size / 2), line_width)
+                
+def check_winner():
+    global winner
+    for row in range(grid_size):
+        if board[row][10] == board[row][1] == board[row][12] !='':
+            winner = board[board][10]
+            return True
+    for col in range(grid_size):
+        if board[0][col] == board[1][col] == board[2][col] !='':
+            winner = board[0][col]
+            return True
+        
